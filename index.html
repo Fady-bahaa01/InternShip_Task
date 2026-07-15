@@ -16,6 +16,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <section>
@@ -26,10 +30,14 @@
               <h2>Fady Bahaa</h2>
               <div class="nav">
                 <a class="navStyle" href="">Home</a>
-                <a class="navStyle" href="">About</a>
-                <a class="navStyle" href="">Services</a>
-                <a class="navStyle" href="">Contact</a>
-                <i class="fa-solid fa-bars"></i>
+                <a class="navStyle" href="#about">About</a>
+                <a class="navStyle" href="#services">Services</a>
+                <a class="navStyle" href="#contact">Contact</a>
+                <i
+                  class="fa-solid fa-bars"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#mobileMenu"
+                ></i>
               </div>
             </div>
           </div>
@@ -44,15 +52,22 @@
               <h2>Fady Bahaa</h2>
               <p>WordPress Developer and Front End Expert</p>
               <div class="btnHolder">
-                <a href="" class="btn_1">About Me</a>
-                <a href="" class="btn_2">Hire me</a>
+                <a href="#about" class="btn_1">About Me</a>
+                <button
+                  type="button"
+                  class="btn_2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#hireModal"
+                >
+                  Hire Me
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="AboutMe">
+    <div class="AboutMe" id="about">
       <div class="container">
         <h2>About Me</h2>
         <div class="AboutContent">
@@ -128,7 +143,7 @@
       </div>
     </div>
 
-    <div class="abilites">
+    <div class="abilites" id="services">
       <div class="container">
         <h2>What I Can Do!</h2>
         <div class="line"></div>
@@ -175,11 +190,18 @@
       </div>
     </div>
 
-    <div class="hireSection">
+    <div class="hireSection" id="contact">
       <div class="overlay">
         <div class="container">
           <h2>Need a Professional Developer?</h2>
-          <a>Hire Me</a>
+          <button
+            type="button"
+            class="btn_2"
+            data-bs-toggle="modal"
+            data-bs-target="#hireModal"
+          >
+            Hire Me
+          </button>
         </div>
       </div>
     </div>
@@ -245,5 +267,98 @@
     <div class="footer">
       <p>Copyrights fadybahaa.com - Designed by fady team</p>
     </div>
+
+    <!-- modal pop up -->
+    <div class="modal fade" id="hireModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title modalTitle">Hire Me</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <h5>Let's Work Together</h5>
+
+            <p>
+              I'm a Front-End & WordPress Developer passionate about building
+              responsive and modern websites.
+            </p>
+
+            <p>
+              Feel free to contact me if you need a portfolio, landing page,
+              e-commerce website, or any custom web project.
+            </p>
+
+            <hr />
+
+            <h5>Services</h5>
+
+            <ul>
+              <li>Responsive Websites</li>
+              <li>WordPress Development</li>
+              <li>Landing Pages</li>
+              <li>Portfolio Websites</li>
+              <li>Bug Fixes</li>
+            </ul>
+
+            <hr />
+
+            <h5>Contact</h5>
+
+            <p>Email: fady.hakeem2990@gmail.com</p>
+            <p>Phone: +20 120 054 7053</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+
+            <!-- dummy transition -->
+            <a href="mailto:your@email.com" class="btn btn-success">
+              Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------------------------------- -->
+
+    <!-- Side Bar Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <nav class="d-flex flex-column gap-3">
+          <a href="#about" data-bs-dismiss="offcanvas">About</a>
+          <hr />
+          <a href="#services" data-bs-dismiss="offcanvas">Services</a>
+          <hr />
+          <a href="#contact" data-bs-dismiss="offcanvas">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
