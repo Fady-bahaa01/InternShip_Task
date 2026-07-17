@@ -168,14 +168,11 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   z-index: 1;
-  @media screen and(max-width: 767px) {
-    background-attachment: scroll;
-  }
 
   .overlay {
     width: 100%;
     height: 100%;
-    background-color: #009ee293;
+    background-color: #009ee250;
 
     z-index: 2;
 
@@ -522,9 +519,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  @media screen and(max-width: 767px) {
-    background-attachment: scroll;
-  }
 
   .overlay {
     width: 100%;
